@@ -10,7 +10,7 @@ namespace WebMVC_CallApi.Controllers
 
         public CustomerController()
         {
-            int u = 7;
+            int u = 9;
             _httpClient = new HttpClient();
         }
 
