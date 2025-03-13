@@ -1,0 +1,20 @@
+﻿@model WebMVC_CallApi.Models.Customer
+
+<h2>Müştəri Redaktəsi</h2>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Ad:</label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name" required />
+
+    <label>Soyad:</label>
+    <input type="text" name="Surname" class="form-control" value="@Model.Surname" required />
+
+    <label>Yaş:</label>
+    <input type="number" name="Age" class="form-control" value="@Model.Age" required />
+
+    <label>Region Id:</label>
+    <input type="number" name="RegionId" class="form-control" value="@Model.RegionId" required />
+
+    <button type="submit" class="btn btn-primary mt-2">Yenilə</button>
+</form>

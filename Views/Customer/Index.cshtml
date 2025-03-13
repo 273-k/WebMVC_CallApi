@@ -1,0 +1,33 @@
+﻿@model List<WebMVC_CallApi.Models.Customer>
+
+<h2>Müştəri Siyahısı</h2>
+<a href="/Customer/Create" class="btn btn-success">Yeni Müştəri</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+            <th>Region Id</th>
+            <th>Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.Surname</td>
+                <td>@customer.Age</td>
+                <td>@customer.RegionId</td>
+                <td>
+                    <a href="/Customer/Edit/@customer.Id" class="btn btn-warning">Düzəliş et</a>
+                    <a href="/Customer/Delete/@customer.Id" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
